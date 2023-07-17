@@ -1,0 +1,17 @@
+:root {
+  /* Color */
+  --grey-bg-color: #f5f5f7;
+  --grey-dark-color: #767676;
+  --grey-light-color: #fefefe;
+  --black-color: #191919;
+  --white-color: #ffffff;
+  --main-color: #3616ce;
+  --sub-color: #610770;
+  --shadow-color: 4px 4px 13px 0 rgba(54, 22, 206, 0.03);
+
+  /* Size */
+  --margin: 20px;
+
+  /* Font Size */
+
+}
