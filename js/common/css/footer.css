@@ -149,7 +149,6 @@ footer{
 
 
 /*Tablet size*/
-
 @media screen and ( min-width: 744px ) and ( max-width: 1023px){
   .contents{
     width: 100%;
@@ -266,7 +265,6 @@ footer{
 
 
 /*Mobile size*/
-
 @media screen and ( min-width: 360px ) and ( max-width: 767px ){
   .arrow{
     display: none;
