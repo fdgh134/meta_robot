@@ -1,37 +1,42 @@
 $(window).resize(function(){document.location.reload();})
 
+$(document).ready( function() {
+
+  $("#header").load("commom/header.php"); 
+  $("#footer").load("common/footer.php"); 
+  
+  });
+
 $(document).ready(function(){
   $('.bxslider').bxSlider();
 });
 
-if (matchMedia("screen and (min-width: 1024px)").matches) {
   $(document).ready(function(){
-    $('.return_plan').click(function(){
-      $(this).children('.plan').stop().show();
-      $('.take_plan').children('.plan').stop().hide();
-      $('.take_plan').children('.take').addClass("grey_text");
-      $('.take_plan').children('.take').removeClass("black_text");
-      $(this).children('.return').addClass("black_text");
-    });
-    $('.take_plan').click(function(){
-      $(this).children('.plan').stop().show();
-      $('.return_plan').children('.plan').stop().hide();
-      $('.return_plan').children('.return').addClass("grey_text");
-      $('.return_plan').children('.return').removeClass("black_text");
-      $(this).children('.take').addClass("black_text");
-    });
-  });
-
-  $(document).ready(function(){
+    var qnaList2 = $('.buy_or_rent > ul > li');
     var qnaList = $('.robot_qna > ul > li');
+    var choicePlan = $('.choice > ul > li');
 
     qnaList.click(function(){
-      $(this).addClass('blue_blod').removeClass('white_thin');
-      $(this).find('.choice').removeClass('hide');
-      qnaList.not($(this)).find('.choice').addClass('hide');
-      qnaList.not($(this)).addClass('white_thin').removeClass('blue_blod');
+      $(this).addClass("blue_blod").removeClass("white_thin");
+      $(this).find('.choice').removeClass("hide");
+      qnaList.not($(this)).find('.choice').addClass("hide");
+      qnaList.not($(this)).addClass("white_thin").removeClass("blue_blod");
     });
+
+    qnaList2.click(function(){
+      $(this).addClass("blue_blod").removeClass("white_thin");
+      $(this).find('.w_zone').removeClass("hide");
+      qnaList2.not($(this)).find('.w_zone').addClass("hide");
+      qnaList2.not($(this)).addClass("white_thin").removeClass("blue_blod");
+    });
+
+    choicePlan.click(function(){
+      $(this).children('.plan').removeClass("hide");
+      choicePlan.not($(this)).children('.plan').addClass("hide");
+      $(this).find('a').addClass("black_text").removeClass("grey_text");
+      choicePlan.not($(this)).find('a').addClass("grey_text").removeClass("black_text");
+    });
+    
   });
 
-}
 
